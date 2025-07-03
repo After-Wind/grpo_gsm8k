@@ -60,7 +60,7 @@ sbatch submit_grpo.slurm
 python train_grpo.py Qwen/Qwen2.5-3B-Instruct
 
 # Evaluate trained model
-python evaluate_gsm8k.py ./outputs/checkpoint-final
+python evaluate_gsm8k.py ./checkpoint-final
 ```
 
 ## Results
