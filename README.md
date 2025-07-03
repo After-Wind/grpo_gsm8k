@@ -25,7 +25,7 @@ Here is an intro to the files in this repo:
     models that are not supported by vLLM, such as
     [GPT-Neo](https://huggingface.co/EleutherAI/gpt-neo-2.7B).
 - `train_grpo.py`
--   Executes via Hugging Face
+  - Executes via Hugging Face
     [Accelerate](https://huggingface.co/docs/accelerate/en/index) for multi-GPU
     training via the Slurm script `submit_grpo.slurm`. It relies on
     `GRPOTrainer` and defines reward functions for accuracy, format and length.
