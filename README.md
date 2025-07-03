@@ -14,19 +14,27 @@ from a mere 7.00% to 39.00%.
 
 Here is an intro to the files in this repo:
 
-- `prepare_gsm8k.py` prepares two
-  [GSM8K](https://huggingface.co/datasets/openai/gsm8k) JSONLs using Hugging
-  Face [Datasets](https://huggingface.co/docs/datasets/en/index): the training
-  split and a 500-question evaluation split.
-- `evaluate_gsm8k.py` evaluates a model on the saved 500-question JSONL using
-  [vLLM](https://github.com/vllm-project/vllm) for fast inference. Its cousin
-  `evaluate_gsm8k_no_vllm.py` implements evaluation for old Hugging Face models
-  that are not supported by vLLM, such as
-  [GPT-Neo](https://huggingface.co/EleutherAI/gpt-neo-2.7B).
-- `train_grpo.py` executes via Hugging Face
-  [Accelerate](https://huggingface.co/docs/accelerate/en/index) for multi-GPU
-  training via the Slurm script `submit_grpo.slurm`. It relies on `GRPOTrainer`
-  and defines reward functions for accuracy, format and length.
+- `prepare_gsm8k.py`
+  - Prepares two [GSM8K](https://huggingface.co/datasets/openai/gsm8k) JSONLs
+    using Hugging Face [Datasets](https://huggingface.co/docs/datasets/en/index):
+    the training split and a 500-question evaluation split.
+- `evaluate_gsm8k.py`
+  - evaluates a model on the saved 500-question JSONL using
+    [vLLM](https://github.com/vllm-project/vllm) for fast inference. Its cousin
+    `evaluate_gsm8k_no_vllm.py` implements evaluation for old Hugging Face
+    models that are not supported by vLLM, such as
+    [GPT-Neo](https://huggingface.co/EleutherAI/gpt-neo-2.7B).
+- `train_grpo.py`
+-   Executes via Hugging Face
+    [Accelerate](https://huggingface.co/docs/accelerate/en/index) for multi-GPU
+    training via the Slurm script `submit_grpo.slurm`. It relies on
+    `GRPOTrainer` and defines reward functions for accuracy, format and length.
+- `instruct_model_repl.py`
+  - Chat with models in your terminal. Edit the file directly with the Hugging
+    Face models you'd like to chat with at once. Run `python
+    instruct_model_repl.py`, add your prompt after the `>>> ` and hit Enter.
+    Responses from all the models are shown at once. Useful for quickly
+    evaluating capabilities for different models you're interested in.
 
 Environment setup instructions:
 
