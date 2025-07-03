@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Data files
+data/
+
+# Model checkpoints and weights
+checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Training output
+grpo_*/
+*_final/
+
+# Evaluation results
+evals/
+
+# Logs
+logs/
+*.log
+
+# Weights & Biases
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Submission config
+accelerate_config.yaml
