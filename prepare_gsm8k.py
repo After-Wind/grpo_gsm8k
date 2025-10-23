@@ -7,7 +7,7 @@ from datasets import load_dataset
 os.makedirs("data", exist_ok=True)
 
 # Load GSM8K
-dataset = load_dataset("openai/gsm8k", "main")
+dataset = load_dataset("/data/xiongtao/RL_learning/data/gsm8k", "main")
 
 PROMPT = "You are a careful math tutor. Show concise reasoning, then write your final answer on its own line, prefixed by four hash marks. For example, if the final answer is 8, your last line should be #### 8."
 
